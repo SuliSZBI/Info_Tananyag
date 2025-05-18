@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=house"
+        />
+        <link
+            rel="shortcut icon"
+            href="../images/logo.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="../css/stilus.css"
+        />
+        <title>A .NET keretrendszer</title>
+    </head>
+    <body>
+        <nav>
+            <div id="navbar-image-container">
+                <a href="../bevezetes_a_szoftverfejlesztesbe.html"
+                    ><span class="material-symbols-outlined"> house </span></a
+                >
+            </div>
+        </nav>
+        <h1 id="focim">A .NET keretrendszer</h1>
+        <h4 id="alcim">
+            (Asztali alkalmazások fejlesztése - Bevezetés a
+            szoftverfejlesztésbe)
+        </h4>
+        <div id="szoveges-container">
+            <h3>A .NET keretrendszer (framework)</h3>
+            <p>
+                A .NET keretrendszer (vagy .NET platform) a Microsoft által
+                fejlesztett, nyílt forráskódú fejlesztési környezet és
+                futtatókörnyezet, amely lehetővé teszi különböző típusú
+                alkalmazások (például asztali, webes, mobil, játék, felhő)
+                fejlesztését és futtatását több nyelven (pl. C#, F#, VB.NET).
+            </p>
+            <p>
+                A legfontosabb célja az, hogy egységes környezetet biztosítson a
+                fejlesztéshez és a futtatáshoz, függetlenül attól, hogy milyen
+                eszközön vagy operációs rendszeren fut az adott alkalmazás. Két
+                fő részből áll:
+            </p>
+            <ul>
+                <li>
+                    .NET futtatókörnyezet (Runtime) - például a Common Language
+                    Runtime (CLR) vagy a CoreCLR, amely kezeli a memóriát,
+                    hibákat, biztonságot stb.
+                </li>
+                <li>
+                    .NET osztálykönyvtárak (FCL - Framework Class Library) -
+                    előre megírt, újrafelhasználható kódmodulok például
+                    fájlkezeléshez, hálózati kommunikációhoz,
+                    adatbázis-kezeléshez, stb.
+                </li>
+            </ul>
+            <p>
+                Forrás:
+                <a href="https://en.wikipedia.org/wiki/.NET_Framework"
+                    >.NET Keretrendszer</a
+                >
+            </p>
+            <h4>Mire használható a .NET keretrendszer?</h4>
+            <table>
+                <tr>
+                    <th>Alkalmazástípus, terület</th>
+                    <th>Példa, leírás</th>
+                </tr>
+                <tr>
+                    <td>Asztali alkalmazások</td>
+                    <td>
+                        Windows Forms, WPF (Windows Presentation Foundation),
+                        MAUI (cross-platform)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Webalkalmazások és API-k</td>
+                    <td>ASP.NET, ASP.NET Core, Blazor</td>
+                </tr>
+                <tr>
+                    <td>Mobilalkalmazások</td>
+                    <td>.NET MAUI, Xamarin (Android, iOS)</td>
+                </tr>
+                <tr>
+                    <td>Felhőszolgáltatások</td>
+                    <td>Azure-integráció, microservice-ek</td>
+                </tr>
+                <tr>
+                    <td>Játékfejlesztés</td>
+                    <td>Unity (C# alapú, .NET-tel működik)</td>
+                </tr>
+                <tr>
+                    <td>IoT és beágyazott rendszerek</td>
+                    <td>
+                        .NET nanoFramework, Meadow F7, .NET IoT csomagok és
+                        eszközök
+                    </td>
+                </tr>
+                <tr>
+                    <td>Konzolos (parancssori) eszközök, szkriptek</td>
+                    <td>
+                        Automatizálás, rendszerfelügyelet, gyors
+                        CLI-alkalmazások készítése
+                    </td>
+                </tr>
+            </table>
+            <h4>Főbb elemei a .NET ökoszisztémának:</h4>
+            <table>
+                <tr>
+                    <th>Elem</th>
+                    <th>Szerep</th>
+                </tr>
+                <tr>
+                    <td>.NET SDK</td>
+                    <td>A fejlesztéshez szükséges fordítók, eszközök.</td>
+                </tr>
+                <tr>
+                    <td>.NET Runtime</td>
+                    <td>A programok futtatásához szükséges környezet.</td>
+                </tr>
+                <tr>
+                    <td>C# nyelv</td>
+                    <td>A legnépszerűbb nyelv a .NET környezetben.</td>
+                </tr>
+                <tr>
+                    <td>BCL (Base Class Library)</td>
+                    <td>
+                        Alapvető osztályok (fájlkezelés, hálózat, kollekciók
+                        stb.).
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>NuGet</td>
+                    <td>Hivatalos .NET csomagkezelő: könyvtárak letöltése.</td>
+                </tr>
+                <tr>
+                    <td>MSBuild</td>
+                    <td>A projektek építésének rendszere.</td>
+                </tr>
+                <tr>
+                    <td>Visual Studio / VS Code</td>
+                    <td>Fejlesztőkörnyezetek (IDE-k).</td>
+                </tr>
+            </table>
+            <h4>A .NET család főbb változatai:</h4>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Rövid leírás</th>
+                </tr>
+                <tr>
+                    <td>.NET Framework</td>
+                    <td>2002-től, csak Windows-on, pl. WinForms, WPF.</td>
+                </tr>
+                <tr>
+                    <td>.NET Core</td>
+                    <td>Modern, gyorsabb, cross-platform (2016-2020).</td>
+                </tr>
+                <tr>
+                    <td>.NET 5+ / .NET 6, 7, 8…</td>
+                    <td>
+                        2020-tól: .NET Core és .NET Framework összeolvasztva egy
+                        új platformba.
+                    </td>
+                </tr>
+            </table>
+            <p>
+                Jelenleg a hivatalos és aktívan fejlesztett verziók a .NET 6,
+                .NET 7, .NET 8 (2024-től LTS támogatással), stb.
+            </p>
+            <h3>Miért használd a .NET-et?</h3>
+            <ul>
+                <li>Keresztplatformos: Windows, Linux, macOS.</li>
+                <li>Stabil és jól támogatott.</li>
+                <li>Magas szintű biztonság és memória-kezelés.</li>
+                <li>Magas szintű nyelvi eszközök (pl. async/await, LINQ).</li>
+                <li>Gazdag könyvtári ökoszisztéma.</li>
+                <li>Kiváló IDE támogatás (Visual Studio, Rider, VS Code).</li>
+                <li>Nyílt forráskódú (GitHub-on elérhető).</li>
+                <li>Nagy és aktív fejlesztői közösség.</li>
+                <li>Teljes Azure-felhő integráció.</li>
+            </ul>
+            <h3>Mikor érdemes használni a .NET-et?</h3>
+            <ul>
+                <li>Ha C# nyelven szeretnél fejleszteni.</li>
+                <li>Ha modern webes vagy mobilalkalmazást építesz.</li>
+                <li>
+                    Ha Windows alkalmazást vagy játékot készítesz Unity-ben.
+                </li>
+                <li>
+                    Ha Microsoft-technológiákhoz szeretnél szorosan illeszkedni
+                    (pl. SQL Server, Azure, Office).
+                </li>
+            </ul>
+        </div>
+        <script src="../js/betolt.js"></script>
+    </body>
+</html>

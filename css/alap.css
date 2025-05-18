@@ -55,10 +55,44 @@ a:visited {
     width: 100%;
 }
 
+.feladat-container {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 1em auto;
+    padding: 1em;
+    width: 50%;
+}
+
+.feladat-leiras {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1em;
+    width: 50%;
+}
+
+.feladat-megoldas {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1em;
+    width: 50%;
+}
+
 @media screen and (max-width: 1200px) {
     #csempe-container {
         grid-template-columns: repeat(3, 1fr);
         width: 90%;
+    }
+
+    .feladat-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .feladat-leiras,
+    .feladat-megoldas {
+        width: 100%;
     }
 }
 
