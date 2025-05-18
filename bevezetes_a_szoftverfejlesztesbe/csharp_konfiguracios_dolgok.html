@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=house"
+        />
+        <link
+            rel="stylesheet"
+            href="../css/stilus.css"
+        />
+        <title>
+            C# forrás- és konfigurációs fájlok, futtatókörnyezetek, frameworkök
+        </title>
+    </head>
+    <body>
+        <nav>
+            <div id="navbar-image-container">
+                <a href="../bevezetes_a_szoftverfejlesztesbe.html"
+                    ><span class="material-symbols-outlined"> house </span></a
+                >
+            </div>
+        </nav>
+        <h1 id="focim">
+            C# forrás- és konfigurációs fájlok, futtatókörnyezetek, frameworkök
+        </h1>
+        <h4 id="alcim">
+            (Asztali alkalmazások fejlesztése - Bevezetés a
+            szoftverfejlesztésbe)
+        </h4>
+        <div id="szoveges-container">
+            <h3>A C# fejlesztési ökoszisztéma</h3>
+            <p>
+                A C# nyelv a .NET ökoszisztéma része, és a fejlesztés során
+                többféle forrás-, konfigurációs fájl, futtatókörnyezet és
+                keretrendszer (framework) játszik szerepet.
+            </p>
+            <h4>Forrásfájlok a C# nyelvben:</h4>
+            <p>
+                A forrásfájlok tartalmazzák a program logikáját, azaz a
+                fejlesztő által írt kódot, amit a fordítóprogram lefordít és
+                futtatható alkalmazássá alakít.
+            </p>
+            <ul>
+                <li>A program viselkedésének, működésének meghatározása.</li>
+                <li>Modulok, osztályok, függvények deklarálása.</li>
+                <li>Logikai folyamatok vezérlése.</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Fájltípus</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>.cs</td>
+                    <td>
+                        C# forráskód fájl. Osztályokat, interfészeket,
+                        metódusokat tartalmaz.
+                    </td>
+                </tr>
+                <tr>
+                    <td>.csproj</td>
+                    <td>
+                        Projektfájl, XML-formátumban - tartalmazza a fordítási
+                        beállításokat, fájlokat, függőségeket.
+                    </td>
+                </tr>
+                <tr>
+                    <td>.sln</td>
+                    <td>
+                        Megoldásfájl (solution), Visual Studio projekteket
+                        egyesít.
+                    </td>
+                </tr>
+                <tr>
+                    <td>.dll</td>
+                    <td>
+                        Dinamikusan betölthető .NET assembly - gyakran projekt
+                        eredménye.
+                    </td>
+                </tr>
+                <tr>
+                    <td>.exe</td>
+                    <td>
+                        Futtatható fájl, ha a projekt típusától függően azt hoz
+                        létre.
+                    </td>
+                </tr>
+            </table>
+            <h4>Konfigurációs fájlok a C# nyelvben:</h4>
+            <p>
+                A konfigurációs fájlok a program futtatásának környezeti és
+                működési beállításait tartalmazzák - gyakran különállóan a
+                forráskódtól.
+            </p>
+            <ul>
+                <li>
+                    Külső beállítások megadása (pl. adatbázis elérés,
+                    API-kulcsok, fájlútvonalak).
+                </li>
+                <li>
+                    Futtatási környezet beállítása (pl. fejlesztői vagy éles
+                    környezet).
+                </li>
+                <li>
+                    Fordítási paraméterek (pl. mely fájlokat fordítsa le, milyen
+                    verziójú SDK-t használjon).
+                </li>
+                <li>Projektstruktúra és függőségek leírása.</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Előny</th>
+                    <th>Magyarázat</th>
+                </tr>
+                <tr>
+                    <td>Kód és konfiguráció szétválasztása.</td>
+                    <td>
+                        Könnyebb karbantartás, újrakonfigurálás újrafordítás
+                        nélkül.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Környezetspecifikus működés.</td>
+                    <td>
+                        Ugyanaz a kód másként viselkedhet dev/test/prod
+                        környezetekben.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Automatizálás támogatása.</td>
+                    <td>Könnyebb CI/CD folyamatok kialakítása.</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Fájl</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>app.config / web.config</td>
+                    <td>
+                        Klasszikus XML-alapú konfigurációs fájlok .NET Framework
+                        alatt.
+                    </td>
+                </tr>
+                <tr>
+                    <td>appsettings.json</td>
+                    <td>
+                        Modern JSON-alapú konfiguráció .NET Core és .NET 5+
+                        alatt.
+                    </td>
+                </tr>
+                <tr>
+                    <td>launchSettings.json</td>
+                    <td>
+                        A fejlesztési környezet futtatási beállításait
+                        tartalmazza.
+                    </td>
+                </tr>
+                <tr>
+                    <td>global.json</td>
+                    <td>.NET SDK verziót határoz meg több projekt esetén.</td>
+                </tr>
+                <tr>
+                    <td>Directory.Build.props / targets</td>
+                    <td>MSBuild közös konfigurációk.</td>
+                </tr>
+            </table>
+            <h4>C# futtatókörnyezetek:</h4>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Funkció</th>
+                </tr>
+                <tr>
+                    <td>.NET Framework</td>
+                    <td>Klasszikus, Windows-only platform (pl. 4.8).</td>
+                </tr>
+                <tr>
+                    <td>.NET Core</td>
+                    <td>Cross-platform futtatókörnyezet (2016-2020).</td>
+                </tr>
+                <tr>
+                    <td>.NET 5/6/7/8</td>
+                    <td>Egyesített, modern platform (a .NET Core utódja).</td>
+                </tr>
+                <tr>
+                    <td>Mono</td>
+                    <td>
+                        Nyílt forráskódú .NET implementáció (hasznos mobil és
+                        Unity fejlesztésben).
+                    </td>
+                </tr>
+                <tr>
+                    <td>Blazor WebAssembly Runtime</td>
+                    <td>
+                        Böngészőben futó .NET környezet (C# WebAssembly-re
+                        fordítva).
+                    </td>
+                </tr>
+            </table>
+            <h4>Népszerű C# frameworkök:</h4>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>ASP.NET Core</td>
+                    <td>
+                        Modern, platformfüggetlen webes és API fejlesztési
+                        keretrendszer.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Blazor</td>
+                    <td>
+                        Webes frontend fejlesztés C# nyelven, WebAssembly vagy
+                        szerveres rendereléssel.
+                    </td>
+                </tr>
+                <tr>
+                    <td>SignalR</td>
+                    <td>Realtime kommunikáció webalkalmazásokhoz.</td>
+                </tr>
+            </table>
+            <h4>Asztali alkalmazások:</h4>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>Windows Forms</td>
+                    <td>
+                        Klasszikus Windows GUI (Visual Studio alapértelmezettje
+                        volt).
+                    </td>
+                </tr>
+                <tr>
+                    <td>WPF (Windows Presentation Foundation)</td>
+                    <td>Fejlettebb, XAML-alapú UI technológia.</td>
+                </tr>
+                <tr>
+                    <td>MAUI (Multi-platform App UI)</td>
+                    <td>
+                        Modern, többplatformos UI keretrendszer (iOS, Android,
+                        Windows, macOS).
+                    </td>
+                </tr>
+            </table>
+            <h4>ORM és adatkezelés:</h4>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>Entity Framework Core</td>
+                    <td>
+                        Objektum-relációs leképezés (ORM), LINQ támogatással.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dapper</td>
+                    <td>Lightweight ORM, manuális SQL lekérdezésekkel.</td>
+                </tr>
+            </table>
+            <h4>Mobilfejlesztés:</h4>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>Xamarin</td>
+                    <td>
+                        Cross-platform mobilfejlesztés .NET-tel (MAUI elődje).
+                    </td>
+                </tr>
+            </table>
+            <p>
+                Forrás:
+                <a href="https://learn.microsoft.com/hu-hu/dotnet/"
+                    >Microspft .NET dokumentáció</a
+                >
+            </p>
+            <p>
+                Forrás:
+                <a href="https://github.com/dotnet">.NET GitHub</a>
+            </p>
+            <p>
+                Forrás:
+                <a
+                    href="https://learn.microsoft.com/hu-hu/aspnet/core/?view=aspnetcore-9.0"
+                    >ASP.NET dokumentáció</a
+                >
+            </p>
+            <p>
+                Forrás:
+                <a
+                    href="https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-9.0"
+                    >Maui</a
+                >
+            </p>
+            <p>
+                Forrás:
+                <a href="https://learn.microsoft.com/en-us/ef/"
+                    >Entity Framework</a
+                >
+            </p>
+        </div>
+        <script src="../js/betolt.js"></script>
+    </body>
+</html>

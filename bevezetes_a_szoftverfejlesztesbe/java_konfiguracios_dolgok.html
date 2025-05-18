@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=house"
+        />
+        <link
+            rel="stylesheet"
+            href="../css/stilus.css"
+        />
+        <title>
+            Java forrás- és konfigurációs fájlok, futtatókörnyezetek,
+            frameworkök
+        </title>
+    </head>
+    <body>
+        <nav>
+            <div id="navbar-image-container">
+                <a href="../bevezetes_a_szoftverfejlesztesbe.html"
+                    ><span class="material-symbols-outlined"> house </span></a
+                >
+            </div>
+        </nav>
+        <h1 id="focim">
+            Java forrás- és konfigurációs fájlok, futtatókörnyezetek,
+            frameworkök
+        </h1>
+        <h4 id="alcim">
+            (Asztali alkalmazások fejlesztése - Bevezetés a
+            szoftverfejlesztésbe)
+        </h4>
+        <div id="szoveges-container">
+            <h3>A Java fejlesztési ökoszisztéma</h3>
+            <p>
+                A Java fejlesztési ökoszisztémájában kulcsfontosságúak a
+                forrásfájlok, konfigurációs fájlok, a futtatókörnyezetek és a
+                különféle keretrendszerek (frameworkök).
+            </p>
+            <h4>Forrásfájlok a Java nyelvben:</h4>
+            <p>
+                A forrásfájlok tartalmazzák a program logikáját, azaz a
+                fejlesztő által írt kódot, amit a fordítóprogram lefordít és
+                futtatható alkalmazássá alakít.
+            </p>
+            <ul>
+                <li>A program viselkedésének, működésének meghatározása.</li>
+                <li>Modulok, osztályok, függvények deklarálása.</li>
+                <li>Logikai folyamatok vezérlése.</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Fájltípus</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>.java</td>
+                    <td>Java nyelven írt forráskód.</td>
+                </tr>
+                <tr>
+                    <td>.class</td>
+                    <td>
+                        Fordított Java bytecode (a .java fájlokból a javac
+                        parancs készíti).
+                    </td>
+                </tr>
+                <tr>
+                    <td>.jar</td>
+                    <td>
+                        Java archívum - tömörített fájlok, amely több .class,
+                        konfiguráció, metaadatot tartalmaz.
+                    </td>
+                </tr>
+            </table>
+            <h4>Konfigurációs fájlok a Java nyelvben:</h4>
+            <p>
+                A konfigurációs fájlok a program futtatásának környezeti és
+                működési beállításait tartalmazzák - gyakran különállóan a
+                forráskódtól.
+            </p>
+            <ul>
+                <li>
+                    Külső beállítások megadása (pl. adatbázis elérés,
+                    API-kulcsok, fájlútvonalak).
+                </li>
+                <li>
+                    Futtatási környezet beállítása (pl. fejlesztői vagy éles
+                    környezet).
+                </li>
+                <li>
+                    Fordítási paraméterek (pl. mely fájlokat fordítsa le, milyen
+                    verziójú SDK-t használjon).
+                </li>
+                <li>Projektstruktúra és függőségek leírása.</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Előny</th>
+                    <th>Magyarázat</th>
+                </tr>
+                <tr>
+                    <td>Kód és konfiguráció szétválasztása.</td>
+                    <td>
+                        Könnyebb karbantartás, újrakonfigurálás újrafordítás
+                        nélkül.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Környezetspecifikus működés.</td>
+                    <td>
+                        Ugyanaz a kód másként viselkedhet dev/test/prod
+                        környezetekben.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Automatizálás támogatása.</td>
+                    <td>Könnyebb CI/CD folyamatok kialakítása.</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Fájltípus / technológia</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>manifest.mf</td>
+                    <td>JAR fájlok metaadatait tartalmazza.</td>
+                </tr>
+                <tr>
+                    <td>application.properties / application.yml</td>
+                    <td>Spring Boot konfigurációs fájl.</td>
+                </tr>
+                <tr>
+                    <td>pom.xml</td>
+                    <td>
+                        Maven build-eszköz konfigurációs fájlja
+                        (projektfüggőségek, pluginok).
+                    </td>
+                </tr>
+                <tr>
+                    <td>build.gradle</td>
+                    <td>
+                        Gradle build-eszköz konfigurációs fájlja (alternatíva a
+                        Mavenhez).
+                    </td>
+                </tr>
+                <tr>
+                    <td>web.xml</td>
+                    <td>
+                        Régebbi Java EE webes alkalmazások konfigurációs fájlja.
+                    </td>
+                </tr>
+                <tr>
+                    <td>log4j.properties / logback.xml</td>
+                    <td>Naplózási konfigurációk (Log4j, Logback stb.).</td>
+                </tr>
+            </table>
+            <h4>Java futtatókörnyezetek:</h4>
+            <table>
+                <tr>
+                    <th>Rövidítés</th>
+                    <th>Név</th>
+                    <th>Funkció</th>
+                </tr>
+                <tr>
+                    <td>JDK</td>
+                    <td>Java Development Kit</td>
+                    <td>
+                        Fejlesztéshez: tartalmazza a fordítót (javac),
+                        debugger-t, eszközöket.
+                    </td>
+                </tr>
+                <tr>
+                    <td>JRE</td>
+                    <td>Java Runtime Environment</td>
+                    <td>
+                        Csak a futtatáshoz szükséges: JVM + alap könyvtárak.
+                    </td>
+                </tr>
+                <tr>
+                    <td>JVM</td>
+                    <td>Java Virtual Machine</td>
+                    <td>A bytecode végrehajtásáért felelős virtuális gép.</td>
+                </tr>
+                <tr>
+                    <td>OpenJDK</td>
+                    <td></td>
+                    <td>Nyílt forrású Java fejlesztői környezet.</td>
+                </tr>
+                <tr>
+                    <td>GraalVM</td>
+                    <td></td>
+                    <td>
+                        Alternatív JVM, több nyelv támogatásával és natív
+                        képességekkel.
+                    </td>
+                </tr>
+            </table>
+            <h4>Népszerű Java frameworkök:</h4>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>Spring / Spring Boot</td>
+                    <td>Moduláris, könnyű webes és vállalati fejlesztéshez.</td>
+                </tr>
+                <tr>
+                    <td>Jakarta EE (korábban Java EE)</td>
+                    <td>
+                        Oracle/Apache által karbantartott vállalati alkalmazás
+                        platform.
+                    </td>
+                </tr>
+                <tr>
+                    <td>JSF (JavaServer Faces)</td>
+                    <td>Komponens-alapú webes UI keretrendszer.</td>
+                </tr>
+                <tr>
+                    <td>Vaadin</td>
+                    <td>Java alapú frontend framework modern UI-val.</td>
+                </tr>
+            </table>
+            <h4>ORM és adatkezelés:</h4>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>Hibernate</td>
+                    <td>Objektum-relációs leképezés (ORM) keretrendszer.</td>
+                </tr>
+                <tr>
+                    <td>JPA</td>
+                    <td>
+                        Java Persistence API - ORM szabvány, Hibernate az egyik
+                        implementáció.
+                    </td>
+                </tr>
+                <tr>
+                    <td>MyBatis</td>
+                    <td>Kézi SQL-t használó adatlekérdezési keretrendszer.</td>
+                </tr>
+            </table>
+            <h4>Egyéb hasznos frameworkök:</h4>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Leírás</th>
+                </tr>
+                <tr>
+                    <td>Apache Struts</td>
+                    <td>MVC alapú webes keretrendszer.</td>
+                </tr>
+                <tr>
+                    <td>Dropwizard</td>
+                    <td>REST API-k gyors létrehozására.</td>
+                </tr>
+                <tr>
+                    <td>Micronaut</td>
+                    <td>
+                        Modern, felhőbarát, gyors indítási idejű alternatíva
+                        Spring Boot helyett.
+                    </td>
+                </tr>
+            </table>
+            <p>
+                Forrás:
+                <a href="https://docs.oracle.com/en/java/">Oracle</a>
+            </p>
+            <p>
+                Forrás:
+                <a href="https://openjdk.org/">OpenJDK</a>
+            </p>
+            <p>Forrás: <a href="https://spring.io/">Spring</a></p>
+            <p>Forrás: <a href="https://jakarta.ee/">JakartaEE</a></p>
+            <p>
+                Forrás:
+                <a href="https://maven.apache.org/">Maven</a>
+            </p>
+            <p>Forrás: <a href="https://gradle.org/">Gradle</a></p>
+            <p>Forrás: <a href="https://hibernate.org/orm/">Hibernate</a></p>
+            <p>Forrás: <a href="https://www.graalvm.org/">GraalVM</a></p>
+            <p>Forrás: <a href="https://vaadin.com/">Vaadin</a></p>
+            <p>Forrás: <a href="https://micronaut.io/">Micronaut</a></p>
+        </div>
+        <script src="../js/betolt.js"></script>
+    </body>
+</html>

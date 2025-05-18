@@ -1,0 +1,48 @@
+#szoveges-container {
+    margin: auto;
+    width: 50%;
+}
+
+#szoveges-container h3,
+#szoveges-container h4 {
+    margin-bottom: 1em;
+}
+
+#szoveges-container p {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+#szoveges-container ul {
+    margin-bottom: 1em;
+    list-style-position: inside;
+    text-align: justify;
+}
+
+#szoveges-container dl dt {
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+#szoveges-container dl dd {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+table th,
+table td {
+    border-bottom: 1px solid rgb(209, 209, 209);
+    padding: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    #szoveges-container {
+        width: 90%;
+    }
+}

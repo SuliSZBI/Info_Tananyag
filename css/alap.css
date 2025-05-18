@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:visited {
+    color: blue;
+}
+
+#focim {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+#alcim {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+#main-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 830px;
+}
+
+#csempe-container {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 1em auto;
+    width: 80%;
+}
+
+.csempe-elem {
+    /* border: 1px solid black; */
+    font-size: 1.5em;
+}
+
+.csempe-elem a {
+    background-color: rgb(0, 82, 0);
+    border: none;
+    color: whitesmoke;
+    display: block;
+    font-size: 1em;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    #csempe-container {
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #csempe-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #csempe-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+    }
+}
